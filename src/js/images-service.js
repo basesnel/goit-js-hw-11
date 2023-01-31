@@ -7,7 +7,7 @@ export default class ImagesApiService {
   }
 
   async fetchImages() {
-    let url = 'https://pixabay.com/api';
+    let url = 'https://pixabay.com/api/';
     let page = this.page;
 
     const res = await axios
