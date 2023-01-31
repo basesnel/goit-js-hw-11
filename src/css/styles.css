@@ -80,13 +80,6 @@ img {
   fill: var(--head-background);
 }
 
-/* .search-button:before {
-  content: '\f002';
-  font-family: FontAwesome;
-  font-size: 16px;
-  color: var(--head-background);
-}*/
-
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -94,7 +87,6 @@ img {
 }
 
 .photo-link {
-  /* display: block; */
   flex-basis: calc((100% - 6 * 5px) / 4);
   text-decoration: none;
   color: inherit;
@@ -114,6 +106,7 @@ img {
 
 .info {
   display: flex;
+  justify-content: space-around;
   gap: 5px;
 }
 
