@@ -6,11 +6,11 @@ export default class ImagesApiService {
     this.page = 1;
   }
 
-  fetchImages() {
+  async fetchImages() {
     let url = 'https://pixabay.com/api';
     let page = this.page;
 
-    return axios
+    const res = await axios
       .get(url, {
         params: {
           key: '33045581-3a3af9a2074d1c4024adb3324',
@@ -21,11 +21,17 @@ export default class ImagesApiService {
           per_page: '40',
           page: page,
         },
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        maxRedirects: 0,
       })
       .then(response => {
         this.incrementPage();
+        console.log(response);
         return response.data;
       });
+    return res;
   }
 
   incrementPage() {

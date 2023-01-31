@@ -49,6 +49,8 @@ async function toFetchImages() {
     loadMoreBtn.disable();
     const imagesData = await imagesApiService.fetchImages();
 
+    console.log(imagesData);
+
     if (!imagesData.totalHits) throw new Error();
 
     if (!(imagesApiService.page > 2) && imagesData.totalHits) {

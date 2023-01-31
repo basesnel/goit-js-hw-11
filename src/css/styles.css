@@ -71,14 +71,21 @@ img {
   background-color: var(--input-border);
   border-radius: 0 5px 5px 0;
   cursor: pointer;
+  font-size: 0;
 }
 
-.search-button:before {
+.search-icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--head-background);
+}
+
+/* .search-button:before {
   content: '\f002';
   font-family: FontAwesome;
   font-size: 16px;
   color: var(--head-background);
-}
+}*/
 
 .gallery {
   display: flex;
