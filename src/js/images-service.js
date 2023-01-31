@@ -28,7 +28,6 @@ export default class ImagesApiService {
       })
       .then(response => {
         this.incrementPage();
-        console.log(response);
         return response.data;
       });
     return res;
