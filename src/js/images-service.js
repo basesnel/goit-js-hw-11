@@ -31,7 +31,7 @@ export default class ImagesApiService {
     const data = response.data;
     this.incrementPage();
 
-    // if (!data.totalHits) throw new Error();
+    if (!data.totalHits) throw new Error();
 
     if (!(this.page > 2) && data.totalHits) {
       this.success = true;
